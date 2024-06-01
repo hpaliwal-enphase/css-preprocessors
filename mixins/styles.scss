@@ -1,0 +1,39 @@
+@import "./mixins.scss";
+
+$primary-color: rgb(52, 0, 223);
+$primary-font-size: 1.75rem; // helps reduce code. Instead of writing color in multiple places, we use the variable
+
+.text1 {
+  @include text-style-customizable(rgb(2, 77, 13));
+  font-family: "Courier New", Courier, monospace;
+  font-size: $primary-font-size;
+}
+
+.text2 {
+  @include text-style-customizable(rgb(141, 128, 4));
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: $primary-font-size;
+}
+
+.text3 {
+  @include text-style-customizable(
+    rgb(239, 125, 3),
+    border,
+    1px solid black,
+    aqua
+  );
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: $primary-font-size;
+}
+
+.text4 {
+  @include text-style-customizable(rgb(104, 1, 11));
+  font-family: cursive;
+  font-size: $primary-font-size;
+}
+
+.text5 {
+  @include text-style-customizable(rgb(132, 32, 255));
+  font-family: fantasy;
+  font-size: $primary-font-size;
+}

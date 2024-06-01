@@ -1,0 +1,31 @@
+@import './variables.scss';
+
+.text1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(2, 77, 13);
+    font-size: $primary-font-size;
+}
+
+.text2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(141, 128, 4);
+    font-size: $primary-font-size;
+}
+
+.text3 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(239, 125, 3);
+    font-size: $primary-font-size;
+}
+
+.text4 {
+    font-family: cursive;
+    color: rgb(104, 1, 11);
+    font-size: $primary-font-size;
+}
+
+.text5 {
+    font-family: fantasy;
+    color: rgb(132, 32, 255);
+    font-size: $primary-font-size;
+}

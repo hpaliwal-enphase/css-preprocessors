@@ -1,0 +1,30 @@
+/*
+This is standard mixin, helps to centralize group of redudant styles
+*/
+@mixin primary-text-style {
+    margin-bottom: 3rem;
+    padding: 2rem;
+  }
+  
+  /*
+    This is function style mixin, which takes in arguments, optionally assigns them default values, and may contain if-else logic as well
+    */
+  @mixin text-style-customizable(
+    $textColor,
+    $stylePlaceholder: null,
+    $valuePlaceholder: null,
+    $backgroundColor: transparent
+  ) {
+    @include primary-text-style;
+  
+    @if ($backgroundColor != transparent) {
+      background-color: $backgroundColor;
+    }
+  
+    @if ($stylePlaceholder != null) {
+      #{$stylePlaceholder}: $valuePlaceholder; // TIP: way to add template string in scss file
+    }
+  
+    color: $textColor;
+  }
+  

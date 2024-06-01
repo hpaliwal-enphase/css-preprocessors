@@ -1,0 +1,69 @@
+@import "./mixins.scss";
+
+$primary-color: rgb(52, 0, 223);
+$primary-font-size: 1.75rem; // helps reduce code. Instead of writing color in multiple places, we use the variable
+
+.text1 {
+  @include text-style-customizable(rgb(2, 77, 13));
+  font-family: "Courier New", Courier, monospace;
+  font-size: $primary-font-size;
+}
+
+.text2 {
+  @include text-style-customizable(rgb(141, 128, 4));
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: $primary-font-size;
+}
+
+.text3 {
+  @include text-style-customizable(
+    rgb(239, 125, 3),
+    border,
+    1px solid black,
+    aqua
+  );
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: $primary-font-size;
+}
+
+.text4 {
+  @include text-style-customizable(rgb(104, 1, 11));
+  font-family: cursive;
+  font-size: $primary-font-size;
+}
+
+.text5 {
+  @include text-style-customizable(rgb(132, 32, 255));
+  font-family: fantasy;
+  font-size: $primary-font-size;
+}
+
+/**
+    This is an example of nesting. Saves us from having to write redundant code like div h1 {...} and div h2 {...} in order to select certain child components/classes. 
+*/
+div {
+  h1 {
+    @include text-style-customizable(rgb(254, 113, 132));
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  h2 {
+    @include text-style-customizable(rgb(54, 67, 99));
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+}
+
+/**
+Nesting basically introduces a space in parent and child after compiling, if we need to remove space for examples like h1:hover, we use '&'
+*/
+section {
+  h1 {
+    @include text-style-customizable(rgb(151, 174, 102));
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    &:hover {
+      background-color: bisque;
+    }
+  }
+}
